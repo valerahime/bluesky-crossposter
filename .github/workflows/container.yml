@@ -18,9 +18,9 @@ jobs:
       id-token: write
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Build image
-        uses: macbre/push-to-ghcr@v14
+        uses: macbre/push-to-ghcr@v16
         with:
           image_name: ${{ github.repository }}  # it will be lowercased internally
           github_token: ${{ secrets.GITHUB_TOKEN }}

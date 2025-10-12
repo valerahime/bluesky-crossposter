@@ -1,7 +1,4 @@
-# Pin to python 3.12 releases to avoid breaking changes. EOL is October 2029
-FROM python:3.12
-
-# Move to app directory
+FROM python:3.14-alpine
 
 # Install requirements
 COPY requirements.txt ./

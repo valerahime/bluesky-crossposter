@@ -8,7 +8,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Move config stubs
-RUN find /settings -iname '*.txt' -exec bash -c 'mv -- "$1" "${1%.txt}.py"' bash {} \;
+RUN find /settings -iname '*.txt' -exec sh -c 'mv -- "$1" "${1%.txt}.py"' sh {} \;
 
 # Make sure run script is executable
 RUN chmod +rxxx ./run.sh
